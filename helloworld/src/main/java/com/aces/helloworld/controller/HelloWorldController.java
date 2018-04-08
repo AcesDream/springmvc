@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloWorldController {
 
+
     private Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
 
     /**
