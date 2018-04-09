@@ -3,6 +3,7 @@ package com.aces.helloworld.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -76,6 +77,19 @@ public class RequestMappingController {
         logger.info("/ant/*/test：可以匹配：/ant/aaa/test和/ant/bbb/test类似路径");
         logger.info("/ant/**/test：可以匹配：/ant/test和/ant/aaa/bbb/test类似路径");
         logger.info("/ant/test?：可以匹配：/ant/testa和/ant/testb类似路径");
+        return "success";
+    }
+
+    /**
+     * 通过 @PathVariable 可以将URL中占位符参数绑定到控制器处理方法的入参中
+     * URL中的{xxx}可以通过@PathVariable("xxx")绑定到操作方法的入参中
+     * @return
+     */
+    @RequestMapping(value = "/user/{id}")
+    public String requestMappingPathVariable(@PathVariable("id") String userId) {
+        logger.info("@PathVariable注解，可以将URL中占位符参数绑定到控制器处理方法的入参中");
+
+        logger.info("userId：{}", userId);
         return "success";
     }
 }
