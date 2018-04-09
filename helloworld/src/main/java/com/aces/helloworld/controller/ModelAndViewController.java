@@ -12,6 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Date;
 import java.util.Map;
 
+/**
+ * 如何把模型数据放到请求域中
+ * 1、通过返回ModelAndView
+ * 2、通过在方法上添加入参：Map、Model、ModelMap类型都可以
+ */
 @Controller
 public class ModelAndViewController {
 
