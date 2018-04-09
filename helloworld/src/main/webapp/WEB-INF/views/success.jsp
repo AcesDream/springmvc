@@ -12,5 +12,7 @@
 </head>
 <body>
 spring mvc hello world
+time：${requestScope.time}
+name：${requestScope.name}
 </body>
 </html>
