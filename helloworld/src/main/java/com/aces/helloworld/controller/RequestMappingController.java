@@ -57,4 +57,25 @@ public class RequestMappingController {
         logger.info("RequestMapping属性使用说明");
         return "success";
     }
+
+    /**
+     * Ant风格资源地址支持三种通配符
+     * ?：匹配任一字符
+     * *：匹配任意字符，单层
+     * **：匹配多层路径
+     *
+     * @return
+     */
+    @RequestMapping(value = "/ant/*/test")
+    public String requestMappingAnt() {
+        logger.info("Ant风格路径");
+
+        logger.info("?：匹配任一字符");
+        logger.info("*：匹配任意字符，单层");
+        logger.info("**：匹配多层路径");
+        logger.info("/ant/*/test：可以匹配：/ant/aaa/test和/ant/bbb/test类似路径");
+        logger.info("/ant/**/test：可以匹配：/ant/test和/ant/aaa/bbb/test类似路径");
+        logger.info("/ant/test?：可以匹配：/ant/testa和/ant/testb类似路径");
+        return "success";
+    }
 }
