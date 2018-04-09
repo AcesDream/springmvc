@@ -14,5 +14,15 @@
 spring mvc hello world
 time：${requestScope.time}
 name：${requestScope.name}
+request user：${requestScope.user}
+session user：${sessionScope.user}
+
+request home：${requestScope.home}
+session home：${sessionScope.home}
+
+request score：${requestScope.score}
+session score：${sessionScope.score}
+
+
 </body>
 </html>
