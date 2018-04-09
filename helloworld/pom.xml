@@ -50,5 +50,9 @@
         </dependency>
         <!-- 日志依赖结束 -->
 
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
     </dependencies>
 </project>
